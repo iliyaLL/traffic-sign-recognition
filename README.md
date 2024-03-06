@@ -1,6 +1,5 @@
 # Final project
-video https://www.youtube.com/watch?v=PKPsuBqPRqg
-deploy https://tr-1.onrender.com/
+video https://www.youtube.com/watch?v=PKPsuBqPRqg. deploy https://tr-1.onrender.com/
 
 # Introduction
 
