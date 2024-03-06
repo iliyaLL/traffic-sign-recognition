@@ -55,6 +55,7 @@ The initial amount of photos for training is 7000+, so we reduced it by half by 
 - truck traffic prohibited
 - turn left ahead
 - turn right ahead
+![Screenshot 2024-03-06 200649](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/4a22f3b8-cf6d-4924-a887-13515af898aa)
 
 ### Description of ML/DL models
 
