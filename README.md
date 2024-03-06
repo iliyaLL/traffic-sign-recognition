@@ -68,13 +68,16 @@ We did not make use of pre-trained models instead we build a model ourselves usi
 We used image_dataset_from_directory(), returns a tf.data.Dataset object, from keras utils to construct datasets for training and validation, then applied some caching buffered prefetching to facilitate the training process:
 ![Screenshot 2024-03-06 202112](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/b3f6e33d-c6be-4882-b4f1-970ed5275fac)
 ![Screenshot 2024-03-06 202506](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/171da0fe-845c-4bcb-84b0-97cbdb9888a5)
+
 Adding data augmentation:
 
 ![Screenshot 2024-03-06 203007](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/b3a462da-feba-4cd0-9d6d-4350a6ffcc33)
+
 Generally speaking the accuracy of a model may be improved by increasing a dataset. For example, data augmentation is a technique used to artificially create new training data from the existing dataset by applying random transformations like rotations, flips, zooms, etc.  
 Model
 
 ![Screenshot 2024-03-06 203236](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/75667a58-5682-43dd-a62d-7dbe5042e9d5)
+
 Conv2D (Convolutional layer) with no hesitations can be called as the backbone of our model. These layers apply filters (or kernels) to the inputs so they extract features and produce feature maps.
 Pooling functions replace the output of the net at a certain location with a summary statistic of the nearby outputs. This helps in reducing the spatial dimensions of the feature maps result in making the model more robust.
 Batch normalization helps stabilize and speed up the training process by normalizing the activations of each layer.
@@ -84,10 +87,12 @@ Dropout is a regularization technique that boosts accuracy by at least 2%, by dr
 In a multi connected neural network input-output flows in the following way:
 
 ![Screenshot 2024-03-06 210309](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/da7e0daa-9a86-4a2a-a064-b7378186481b)
+
 Input are multiplied by some weights, then their sum is passed to the activation function, which calculates the output of a node.
 
 ![Screenshot 2024-03-06 210611](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/b0a0f945-8d42-49a0-8923-2b1dd2c919a0)
 ![Screenshot 2024-03-06 210810](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/242abca2-edce-46fd-aff0-92aa7de675c0)
+
 # Results
 The model was trained on 10 epoch, achieving the val_accuracy of 97% and loss of
 0.0878.
