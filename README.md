@@ -43,6 +43,20 @@ The Dataset https://universe.roboflow.com/usmanchaudhry622-gmail-com/traffic-and
 Google Drive https://drive.google.com/drive/folders/1NeJhtWPfeU8lxht_9Ud_c4Ecg6ef4FBA
 The initial amount of photos for training is 7000+, so we reduced it by half by deleting unnecessary classes, redundant for Kazakhstan. Classes left:
 
+
+
+
+
+
+
+
+
+
+![Screenshot 2024-03-06 210611](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/e6aba7fc-b67d-4e6b-a4c2-b4ac3d526ed1)
+![Screenshot 2024-03-06 210810](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/607d24bd-e049-4ac8-8816-0060b181453f)
+![Screenshot 2024-03-06 211233](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/ec856f20-68c5-4cd8-ae0a-7f8011b4fdb6)
+![Screenshot 2024-03-06 213031](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/d113a3c6-310d-4380-87e0-5fcc51dca1bd)
+
 - cycle route ahead warning
 - end of all speed and passing limits
 - give way
@@ -56,17 +70,17 @@ The initial amount of photos for training is 7000+, so we reduced it by half by 
 - turn left ahead
 - turn right ahead
 ![Screenshot 2024-03-06 200649](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/4a22f3b8-cf6d-4924-a887-13515af898aa)
-
+![Screenshot 2024-03-06 200726](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/931987fe-c7d0-4d34-8e59-e05b7e65f6d0)
 ### Description of ML/DL models
-
 We did not make use of pre-trained models instead we build a model ourselves using the tensorflow framework
 We used image_dataset_from_directory(), returns a tf.data.Dataset object, from keras utils to construct datasets for training and validation, then applied some caching buffered prefetching to facilitate the training process:
-
+![Screenshot 2024-03-06 203007](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/e8410b27-dcc6-4340-b5e3-7b5e21e90c96)
+![Screenshot 2024-03-06 202112](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/c9e8b819-dd5a-452a-a180-d5fa4abdbd68)
 Adding data augmentation:
-
+![Screenshot 2024-03-06 202506](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/dcdd2985-a461-481a-91a2-a38a52cecb6a)
 Generally speaking the accuracy of a model may be improved by increasing a dataset. For example, data augmentation is a technique used to artificially create new training data from the existing dataset by applying random transformations like rotations, flips, zooms, etc.  
 Model
-
+![Screenshot 2024-03-06 213113](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/7e142739-7fef-4185-8c9f-f15b12378a10)
 Conv2D (Convolutional layer) with no hesitations can be called as the backbone of our model. These layers apply filters (or kernels) to the inputs so they extract features and produce feature maps.
 Pooling functions replace the output of the net at a certain location with a summary statistic of the nearby outputs. This helps in reducing the spatial dimensions of the feature maps result in making the model more robust.
 Batch normalization helps stabilize and speed up the training process by normalizing the activations of each layer.
@@ -74,14 +88,15 @@ Flatten and Dense layers play a pivotal role. Flatten layer convert multi dimens
 Dropout is a regularization technique that boosts accuracy by at least 2%, by dropping some weights. You must consider dropout if your model is over/underfitting.
 
 In a multi connect neural network input-output flows in the following way:
-
+![Screenshot 2024-03-06 213152](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/8f12c968-a7ab-49d2-b8be-c0358a627c74)
 Input are multiplied by some weights, then their sum is passed to the activation function, which calculates the output of a node.
-
+![Screenshot 2024-03-06 213152](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/8f12c968-a7ab-49d2-b8be-c0358a627c74)
+![Screenshot 2024-03-06 213419](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/4dd5d5df-3ae3-4172-90b7-0ebc620a9dea)
 # Results
-
 The model was trained on 10 epoch, achieving the val_accuracy of 97% and loss of
 0.0878.
-
+![Screenshot 2024-03-06 213556](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/14805005-7146-4095-aa6c-40f20aff17ab)
+![Screenshot 2024-03-06 203236](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/3ee5338c-c430-4696-a97c-ceea1e6b59c2)
 The application running in the web performs good overall while still gives produces
 errors.
 Example of the correct recognition:
