@@ -1,5 +1,4 @@
-# Final project
-video https://www.youtube.com/watch?v=PKPsuBqPRqg. deploy https://tr-1.onrender.com/
+# Traffic Sign Recognition
 
 ![Screenshot 2024-03-06 231143](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/75ba2273-7cee-4f0f-b56f-3f2d3ad069b3)
 ![Screenshot 2024-03-06 231154](https://github.com/iliyaLL/traffic-sign-recognition/assets/111357743/9d8ef96e-9492-460f-98ca-4b1b15fc6d1f)
